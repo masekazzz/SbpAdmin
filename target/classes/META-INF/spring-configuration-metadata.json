@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "fisc.receipt-template",
+      "type": "ru.sbp.objects.structures.ReceiptStructure",
+      "sourceType": "ru.sbp.objects.structures.ReceiptStructure"
+    },
+    {
+      "name": "fisc.receipt-template.other",
+      "type": "ru.sbp.objects.structures.ReceiptStructure",
+      "sourceType": "ru.sbp.objects.structures.ReceiptStructure"
+    },
+    {
+      "name": "security.jwt",
+      "type": "ru.sbp.security.props.JwtProperties",
+      "sourceType": "ru.sbp.security.props.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.jwt.access",
+      "type": "java.lang.Long",
+      "sourceType": "ru.sbp.security.props.JwtProperties"
+    },
+    {
+      "name": "security.jwt.refresh",
+      "type": "java.lang.Long",
+      "sourceType": "ru.sbp.security.props.JwtProperties"
+    },
+    {
+      "name": "security.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "ru.sbp.security.props.JwtProperties"
+    }
+  ],
+  "hints": []
+}

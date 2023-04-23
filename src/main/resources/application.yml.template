@@ -1,0 +1,38 @@
+context:
+  url: "https://pay-test.raif.ru/api for testing"
+  callback: "callback address"
+  istest: true
+  callbackServerAddr: "Callback server address"
+  phone: "test number for getting order"
+  sbpMerchantId: "sbp merchant id"
+  redirectUrlPath: "redirect url path"
+fisc:
+  receiptTemplate:
+    receiptNumber: "RANDOMRECEIPTNUMBER"
+    client:
+      email: "example@mail.ru"
+      name: "John Smith"
+    items:
+      -
+        name: "Yellow duck"
+        price: 100
+        quantity: 1
+        amount: 100
+        vatType: "VAT20"
+    total: 100
+spring:
+  mail:
+    host: "smtp.gmail.com"
+    port: 587
+    username: gmail user name
+    password: gmail user password
+    properties:
+        mail:
+            smtp:
+                auth: True
+                enable: True
+security:
+  jwt:
+    secret: encode big string https://www.base64encode.net/ and paste here
+    access: 3600000
+    refresh: 2592000000

@@ -1,0 +1,48 @@
+context:
+        url: "https://pay-test.raif.ru/api"
+        callback: "http://bb.aminimulin.ru:8090/callback"
+        istest: True
+        callbackServerAddr: "jkjkjk"
+        phone: "+79999999999"
+        sbpMerchantId: "MA153683"
+        redirectUrl: "http://qr.paysbp.site:8090/getReceipt/"
+fisc:
+        receiptTemplate:
+                receiptNumber: "RANDOMRECEIPTNUMBER"
+                client:
+                        email: "example@mail.ru"
+                        name: "John Smith"
+                items:
+                        -
+                          name: "Yellow duck"
+                          price: 100
+                          quantity: 1
+                          amount: 100
+                          vatType: "VAT20"
+                total: 100
+debug: true
+spring:
+  mail:
+             host: "smtp.gmail.com"
+             port: 587
+             username: "qrcodereceiptsender@gmail.com"
+             password: "sgusevdlzvcrsdgg"
+             properties:
+                    mail:
+                          smtp:
+                                auth: True
+                                enable: True
+
+  main:
+    allow-bean-definition-overriding: true
+
+
+security:
+  jwt:
+    secret: c2R6ZmdwaWt1c2RmaHBpZ2Zud2hlcnZwYml1ZXlyd2lwdXZlYndpdWZkZ2J2aXVvZXJ2d2ZndmJ5dW9pYXNndnV5b0dWWVVWRkdBVVlJRkdBU1VZREZHRFNBVVlGR1NET0E=
+    access: 3600000
+    refresh: 2592000000
+
+
+server:
+  port: 8090
